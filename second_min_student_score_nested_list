@@ -1,0 +1,22 @@
+if __name__ == '__main__':
+    
+    stu,sco =[[] for x in range(2)]
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        
+        sco.append(score)
+        stu.append([name,score])
+        
+    # print(sco)
+    # print(stu)
+    
+    lowest_scores =[x for x in sco if(x!=min(sco))]
+    second_lowest = min(lowest_scores)
+    
+    names =sorted([name for name,score in stu if(score ==second_lowest)])
+    
+    for i in names:
+        print(i)
+    
+    
