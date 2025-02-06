@@ -1,0 +1,11 @@
+mydict = {}
+
+for x in range(int(input())):
+    name = input()
+    score = int(input())
+    
+    mydict[score] = name
+    
+    
+
+print('Updated dict ',mydict)
