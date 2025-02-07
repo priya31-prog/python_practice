@@ -1,0 +1,61 @@
+Problem
+
+Consider a list (list = []). You can perform the following commands:
+
+insert i e: Insert integer  at position .
+print: Print the list.
+remove e: Delete the first occurrence of integer .
+append e: Insert integer  at the end of the list.
+sort: Sort the list.
+pop: Pop the last element from the list.
+reverse: Reverse the list.
+
+Sample Input 0
+
+12
+insert 0 5
+insert 1 10
+insert 0 6
+print
+remove 6
+append 9
+append 1
+sort
+print
+pop
+reverse
+print
+Sample Output 0
+
+[6, 5, 10]
+[1, 5, 9, 10]
+[9, 5, 1]
+
+Solution
+
+if __name__ == '__main__':
+    N = int(input())
+    arr = [input() for x in range(N)]
+    
+    functions = [word.split(' ') for word in arr]
+    new_list = [] 
+    
+    for func in functions:
+        
+        # print(func)
+        operations = func[0]
+        if(operations == 'insert'):
+            new_list.insert(int(func[1]),int(func[2]))
+        elif(operations == 'remove'):
+            new_list.remove(int(func[1]))
+        elif(operations == 'append'):
+            new_list.append(int(func[1]))
+        elif(operations == 'sort'):
+            new_list.sort()
+        elif(operations == 'pop'):
+            new_list.pop()
+        elif(operations == 'reverse'):
+            new_list.reverse()
+        elif(operations == 'print'):
+            print(new_list)
+        
