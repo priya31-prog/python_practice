@@ -1,0 +1,38 @@
+In the first line, print True if S has any alphanumeric characters. Otherwise, print False.
+In the second line, print True if S has any alphabetical characters. Otherwise, print False.
+In the third line, print True if S has any digits. Otherwise, print False.
+In the fourth line, print True if S has any lowercase characters. Otherwise, print False.
+In the fifth line, print True if S has any uppercase characters. Otherwise, print False.
+
+Example
+qA2
+
+
+o/p
+True
+True
+True
+True
+True
+
+
+if __name__ == '__main__':
+    s = input()
+    
+    is_alnum =False
+    is_alpha =False
+    is_lower = False
+    is_upper =False
+    is_digit = False
+    
+    for i in s:
+        if(i.isalpha()):
+            is_alpha = True
+        if(i.isalnum()):
+            is_alnum = True
+        if(i.isdigit()):
+            is_digit = True
+        if(i.isupper()):
+            is_upper = True
+        if(i.islower()):
+            is_lower = True
