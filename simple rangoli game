@@ -1,0 +1,14 @@
+def printRangoli(num,alignNum):
+    alphabets = "abcdefghijklmnopqrstuvwxyz"
+    string =''.join(reversed(alphabets[:num]))
+    # print(string)
+    
+    for i in range(1,(num)*2):
+        if(i >= num+1):
+            print(string[:num-i].center(alignNum,'-'))
+        
+        else:
+            print(string[:i].center(alignNum,'-'))
+    
+    
+printRangoli(5,20)
