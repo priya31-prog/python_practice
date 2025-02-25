@@ -1,0 +1,27 @@
+def print_rangoli(size):
+    # your code goes here
+    alphabets = 'abcdefghijklmnopqrstuvwxyz'
+    
+    list_size = alphabets[:size]
+    pattern_list =[]
+    # print(list_size)
+    
+    for i in range(size):
+        pattern = '-'.join(list_size[size-1:i:-1] + list_size[i:size])
+        pattern_list.append(pattern)
+        
+        # print(pattern_list)
+    
+    # Print the upper part
+    for i in range(size - 1):
+        print(pattern_list[size - 1 - i].center((size * 4) - 3, '-'))
+    for i in range(0,size):
+        pattern = '-'.join(list_size[size-1:i:-1] + list_size[i:size])
+        print(pattern.center((size*4) -3,'-'))
+        
+    
+        
+
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)
