@@ -1,0 +1,16 @@
+Reversing a string in an alternate mode than -1
+
+def reversingString(size):
+    # your code goes here
+    alphabets = 'abcdefghijklmnopqrstuvwxyz'
+    
+    list_size = alphabets[:size]
+    reversed_list =[''.join(list_size[size-1-i]) for i in range(size)]
+    
+    
+    print(''.join(reversed_list))
+    
+
+if __name__ == '__main__':
+    n = int(input())
+    reversingString(n)
