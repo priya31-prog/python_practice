@@ -1,0 +1,16 @@
+Exceptions
+
+test_cases = int(input())
+
+input_list = []
+
+for i in range(test_cases):
+    string = input().split(' ')
+    # if(string)
+    # print(string)
+    try:
+        print(int(int(string[0])/int(string[1])))
+    except ZeroDivisionError as e:
+        print("Error Code: integer division or modulo by zero")
+    except ValueError as e:
+        print("Error Code:",e)
