@@ -1,0 +1,40 @@
+Task
+
+You are given a date. Your task is to find what the day is on that date.
+
+Input Format
+
+A single line of input containing the space separated month, day and year, respectively, in  MM DD YYYY  format.
+
+Output Format
+Output the correct day in capital letters.
+Sample Input
+08 05 2015
+
+Sample Output
+WEDNESDAY
+
+solution
+
+
+import calendar
+# from datetime import datetime
+
+date_time = input()
+inputs = date_time.split(' ')
+# date = datetime.strptime(date_time, '%m %d %Y')
+
+date = calendar.weekday(int(inputs[2]),int(inputs[0]),int(inputs[1]))
+
+#weekday outputs index of the day - starts from monday
+days = [
+    "MONDAY",
+    "TUESDAY",
+    "WEDNESDAY",
+    "THURSDAY",
+    "FRIDAY",
+    "SATURDAY",
+    "SUNDAY"
+]
+
+print(days[date])
