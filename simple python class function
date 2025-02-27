@@ -1,0 +1,19 @@
+class AreaOfRectangle:
+    def __init__(self,length,breath):
+        self.length = length
+        self.breath = breath
+        
+    def __str__(self):
+        return f'Area of rectangle is {self.length *self.breath}.'
+        
+rect = AreaOfRectangle(4,8)
+
+
+If these 2 lines of codes are uncommented it outputs the value as 24 instead of 32.
+
+since this 4 & 6 overrides 4,8 inputs
+
+# rect.length =4
+# rect.breath = 6
+
+print(rect)
