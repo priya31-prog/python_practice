@@ -1,0 +1,26 @@
+Displays the bank balance with private functions and variables
+
+
+class BankAccount:
+    
+    def __init__(self,accountNumber,balance):
+        self.__accountNumber = accountNumber
+        self.__balance = balance
+        
+    def __displayBalance(self):
+        print(f'The account balance is {self.__balance}')
+        
+    def deposit(self,amount):
+        self.__balance += amount
+        self.__displayBalance()
+        
+    def withdraw(self,amount):
+        if(0 < amount <= self.__balance):
+            self.__balance -=amount
+            self.__displayBalance()
+        else:
+            print('Insufficient balance..')
+            
+bank = BankAccount(456,800)
+bank.withdraw(1800)
+# bank.deposit(900)
