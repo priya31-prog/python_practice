@@ -1,0 +1,20 @@
+import numpy
+
+
+
+n,m,p = input().strip().split(' ')
+n_array = []
+m_array = []
+for i in range(int(n)):
+    arr = list(map(int,input().split(' ')))
+    n_array.append(arr)
+for i in range(int(m)):
+    arr = list(map(int,input().split(' ')))
+    m_array.append(arr)
+    
+n1_array =numpy.array(n_array)
+m1_array = numpy.array(m_array)
+
+
+print (numpy.concatenate((n1_array,m1_array),axis =0))
+    
