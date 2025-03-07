@@ -1,0 +1,11 @@
+find the a&b in the set
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+n = int(input())
+students_e = set(list(map(int,input().split(' '))))
+b =int(input())
+students_f = set(list(map(int,input().split(' '))))
+
+print(len(students_e.intersection(students_f)))
+
