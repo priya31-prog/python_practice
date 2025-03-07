@@ -1,0 +1,17 @@
+import numpy
+
+def matrixProduct(arr1,arr2):
+    print(numpy.dot(arr1,arr2))
+    # print(numpy.cross(arr1,arr2))
+
+n = int(input())
+a_array =[]
+b_array =[]
+for i in range(n):
+    arr = list(map(int,input().split(' ')))
+    a_array.append(arr)
+for i in range(n):
+    arr =  list(map(int,input().split(' ')))
+    b_array.append(arr)
+    
+matrixProduct(a_array,b_array)
