@@ -1,0 +1,12 @@
+find the atlease one occcuranaces of the character
+
+n= int(input())
+students_r = input().split(' ')
+b= int(input())
+students_b = input().split(' ')
+
+students_r = set(students_r)
+students_b =set(students_b)
+uni = students_r.union(students_b)
+
+print(len(uni))
