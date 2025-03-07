@@ -9,3 +9,15 @@ students_f = set(list(map(int,input().split(' '))))
 
 print(len(students_e.intersection(students_f)))
 
+
+find set intersection -->  set1-set2
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+n= int(input())
+student_e = set(map(int,input().split(' ')))
+b =int(input())
+student_f = set(map(int,input().split(' ')))
+
+print(len(student_e - student_f))
+
