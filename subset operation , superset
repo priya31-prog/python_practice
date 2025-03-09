@@ -38,5 +38,12 @@ for i in range(t):
     
     print(aelements.issubset(belements))
 
-    
+
+super set
+
+a = set(map(int,input().split(' ')))
+no_of_others = int(input())
+for i in range(no_of_others):
+    others = set(map(int,input().split(' ')))
+    print(a.issuperset(others) )
 
