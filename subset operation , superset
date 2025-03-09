@@ -41,9 +41,16 @@ for i in range(t):
 
 super set
 
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
 a = set(map(int,input().split(' ')))
 no_of_others = int(input())
+all_list =[]
 for i in range(no_of_others):
     others = set(map(int,input().split(' ')))
-    print(a.issuperset(others) )
+    all_list.append(a.issuperset(others))
+    
+var =False if False in all_list else True
+print(var)
+
 
