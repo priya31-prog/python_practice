@@ -1,0 +1,10 @@
+GCD and LCM of two numbers
+
+a = 4
+b = 8 
+
+gcd = lambda a,b : gcd(b,a%b) if b> 0 else a 
+lcm = (a*b)/gcd(a,b)
+print(gcd(a,b))
+
+print(lcm)
