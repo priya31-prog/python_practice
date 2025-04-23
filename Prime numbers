@@ -16,3 +16,23 @@ def is_prime(num):
     
     
 prime_num(4)
+
+
+
+2.check whether the given number is prime or not
+
+def prime_number(num):
+    for i in range(2,num):
+        if(num%i == 0):
+            isPrime = False
+            break
+        else:
+            isPrime = True
+    if isPrime:
+        print('Is a prime number')
+    else:
+        print('Not a prime number..')
+            
+    
+    
+prime_number(17)
