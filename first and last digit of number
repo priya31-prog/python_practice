@@ -1,0 +1,12 @@
+find the first and last digit of a number
+
+def first_digit(num):
+    while num >= 10 :
+        num = num //10
+        
+    print(num)
+        
+
+first_digit(3566)
+last_digit = 3566 %10
+print(last_digit)
