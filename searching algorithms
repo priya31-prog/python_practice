@@ -1,0 +1,30 @@
+binary search - mid element
+
+print('Binary search program..')
+
+
+def binary_search(li,target,n):
+    low =0
+    high = len(li) -1
+    
+    while low <=high:
+        mid = (low + high) //2
+        
+        if(li[mid] == target):
+            return mid
+        elif(li[low] < target):
+            low +=1 
+        else:
+            high-=1 
+            
+    
+    
+n= int(input('Enter the list of elements you want .. ? '))
+li = [int(input()) for i in range(n)]
+target = int(input('Enter the target element.. : '))
+
+li.sort()
+
+print(binary_search(li,target,n))
+
+# print(mid)
