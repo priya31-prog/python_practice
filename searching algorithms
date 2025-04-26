@@ -28,3 +28,35 @@ li.sort()
 print(binary_search(li,target,n))
 
 # print(mid)
+
+
+2. Jump search
+
+print('Jump search..')
+
+list_items = [2,5,8,9,12]
+n = len(list_items)
+
+start = list_items[0]
+target = 14
+pre = 0
+
+steps = int(len(list_items)**0.5)
+end  = list_items[steps]
+
+while list_items[min(steps,n)] < target:
+    pre = steps
+    steps += int(n**0.5)
+    
+    if(pre >= n):
+        print('Element not found')
+        break
+    
+for i in range(pre,min(steps,n)):
+    if(target == list_items[i]):
+        print(f'Element found at index {i}')
+        break
+        
+else :
+    print('Element not found')
+        
